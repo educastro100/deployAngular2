@@ -1,0 +1,16 @@
+<div *ngIf="produto._id != ''">
+    <label>Título
+        <input [(ngModel)]="produto.title" placeholder="Título">
+    </label>
+
+    <label>Preço
+        <input [(ngModel)]="produto.price" placeholder="Preço">
+    </label>
+
+    <label>Descrição
+        <textarea [(ngModel)]="produto.description" placeholder="Descrição"></textarea>
+    </label>
+
+    <button (click)="editarProduto()" >Editar</button>
+
+</div>

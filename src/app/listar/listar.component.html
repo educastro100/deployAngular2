@@ -1,0 +1,31 @@
+<div>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Preço</td>
+                <td>Descrição</td>
+                <td>Título</td>
+            </tr>
+        </thead>    
+
+        <tbody>
+            <tr *ngFor = "let p of listaProdutos">
+                <td>{{p.title}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.price}}</td>
+                <td>
+                    <app-deletar [produto]="p"></app-deletar>
+                    <button (click)="produtoEditar = p">Editar</button>    
+                </td>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+
+    <app-editar [produto] = "produtoEditar"></app-editar>
+
+
+</div>
