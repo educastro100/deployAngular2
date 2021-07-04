@@ -11,9 +11,9 @@ export class EditarComponent implements OnInit {
 
   @Input() produto : Produto = {
     _id : '' ,
-    title : '',
-    description: '',
-    price: 0,
+    titulo : '',
+    descricao: '',
+    preco: 0,
     createdAt: '',
     updatedAt: '',
     __v: 0
@@ -27,6 +27,7 @@ export class EditarComponent implements OnInit {
     this.web.editarProduto(this.produto).subscribe(res => { 
       if (res.ok == true){
         alert('A Edição foi realizada com sucesso');
+        document.location.reload(true);
       }else{
           alert("Edição não realizada!");
       }

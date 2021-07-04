@@ -13,9 +13,9 @@ export class ListarComponent implements OnInit {
   
   produtoEditar : Produto = {
     _id : '' ,
-    title : '',
-    description: '',
-    price: 0,
+    titulo : '',
+    descricao: '',
+    preco: 0,
     createdAt: '',
     updatedAt: '',
     __v: 0
@@ -28,7 +28,9 @@ export class ListarComponent implements OnInit {
 
   carregarProdutos() : void {
     this.web.getProdutos().subscribe(res => {
+      
       this.listaProdutos = res;
+      console.log(this.listaProdutos);
     });
   }
 

@@ -14,9 +14,9 @@ export class DeletarComponent implements OnInit {
   
   @Input() produto: Produto ={
     _id : '' ,
-    title : '',
-    description: '',
-    price: 0,
+    titulo : '',
+    descricao: '',
+    preco: 0,
     createdAt: '',
     updatedAt: '',
     __v: 0

@@ -11,9 +11,9 @@ import { AppRoutingModule } from '../app-routing.module';
 export class CadastrarComponent implements OnInit {
 
   produto = {
-    title: "",
-    price: 0.0,
-    description: ""
+    titulo: "",
+    preco: 0.0,
+    descricao: ""
   }
 
   constructor(private web: WebService) { }
